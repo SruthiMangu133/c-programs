@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int i,n;
+    scanf("%d",&n);
+    int a[n];
+    for(i=0;i<n;i++){
+        scanf("%d",&a[i]);
+    }
+    int idx,ele;
+    scanf("%d%d",&idx,&ele);
+    if(idx>n){
+        printf("Invalid Input");
+        return 0;
+    }
+    i=n;
+     while(i>idx-1){
+        a[i]=a[i-1];
+         i--;
+    }
+    a[idx-1]=ele; 
+     
+    for(i=0;i<=n;i++) {
+        printf("%d\n",a[i]);
+    }
+
+
+    return 0;
+}
